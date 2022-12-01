@@ -1,0 +1,21 @@
+PL/SQL SELECT INTO statement is the simplest and fastest way to fetch a single row from a table into variables. 
+
+Syntax:
+SELECT
+  select_list
+INTO
+  variable_list
+FROM
+  table_name
+WHERE
+  condition; 
+  
+Example:
+DECLARE
+  emp_name.emp.ename%TYPE;
+BEGIN
+  SELECT ename INTO emp_name
+  FROM emp
+  WHERE empno=7962
+  dbms_output.put_line(emp_name);
+END;
